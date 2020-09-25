@@ -15,4 +15,3 @@ Unit Test :
 - [AddressPredicatesUnitTest](src/test/java/com/example/demopredicates/predicates/AddressPredicatesUnitTest.java)
 - [PersonPredicatesUnitTest](src/test/java/com/example/demopredicates/predicates/PersonPredicatesUnitTest.java)
 
-Integration Test : 

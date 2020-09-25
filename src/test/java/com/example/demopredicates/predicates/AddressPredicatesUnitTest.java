@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class AddressPredicatesUnitTest {
 
     @Test
-    public void AddressRules_hasStreet_returnTrue(){
+    public void AddressPredicates_hasStreet_returnTrue(){
         // GIVEN
         var address = Address.builder().street("Ferdinand").build();
         // WHEN
@@ -20,7 +20,7 @@ public class AddressPredicatesUnitTest {
         assertTrue(result);
     }
     @Test
-    public void AddressRules_hasStreetCode_returnTrue(){
+    public void AddressPredicates_hasStreetCode_returnTrue(){
         // GIVEN
         var address = Address.builder().streetCode("22").build();
         // WHEN

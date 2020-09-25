@@ -5,12 +5,15 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @AllArgsConstructor
 @Builder
 @Getter
 @Setter
 public class Person {
-    String firstname;
-    String lastname;
-    Address address;
+    private String firstname;
+    private String lastname;
+    private Address address;
+    private List<String> nicknames;
 }
