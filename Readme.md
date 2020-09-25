@@ -1,4 +1,5 @@
 # Example Java Predicates and Functions
+[![Build](https://github.com/kevded/demo-java-predicates/workflows/Java%20CI%20with%20Maven/badge.svg)](https://github.com/kevded/geo-app/workflows/Java%20CI%20with%20Maven/badge.svg)
 
 Predicates :
 - [AddressPredicates](src/main/java/com/example/demopredicates/predicates/AddressRules.java)
