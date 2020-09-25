@@ -11,7 +11,9 @@ import static com.example.demopredicates.predicates.StringPredicates.startWithSt
 
 public class PersonPredicates {
 
-    public static Predicate<Person> hasNicknameAndHasNicknamePrefixAndAsStreetAddress(@NonNull String nickname, String nicknamePrefix, String streetAddress) {
+    public static Predicate<Person> hasNicknameAndHasNicknamePrefixAndAsStreetAddress(@NonNull String nickname,
+                                                                                      @NonNull String nicknamePrefix,
+                                                                                      @NonNull String streetAddress) {
         return person -> hasNonNullPersonAndHasNickname(nickname)
                 .and(hasNonNullPersonAndHasNicknameStartWith(nicknamePrefix))
                 .and(hasNonNullPersonAndHasStreetAddress(streetAddress))
