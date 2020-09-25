@@ -1,4 +1,4 @@
-package com.example.demopredicates.rules;
+package com.example.demopredicates.predicates;
 
 import com.example.demopredicates.dto.Person;
 import org.springframework.lang.NonNull;
@@ -6,7 +6,7 @@ import org.springframework.lang.NonNull;
 import java.util.Objects;
 import java.util.function.Predicate;
 
-public class PersonRules {
+public class PersonPredicates {
     public static Predicate<Person> isPersonHasStreetAddress(@NonNull String street) {
         return person -> nonNullPerson().and(hasStreetAddress(street)).test(person);
     }
@@ -17,11 +17,11 @@ public class PersonRules {
 
 
     public static Predicate<Person> hasStreetAddress(@NonNull String streetAddress) {
-        return person -> AddressRules.hasStreet(streetAddress).test(person.getAddress());
+        return person -> AddressPredicates.hasStreet(streetAddress).test(person.getAddress());
     }
 
     public static Predicate<Person> hasStreetCodeAddress(@NonNull String streetCodeAddress) {
-        return person -> AddressRules.hasStreetCode(streetCodeAddress).test(person.getAddress());
+        return person -> AddressPredicates.hasStreetCode(streetCodeAddress).test(person.getAddress());
     }
 
     public static Predicate<Person> nonNullPerson() {

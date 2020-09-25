@@ -1,4 +1,4 @@
-package com.example.demopredicates.rules;
+package com.example.demopredicates.predicates;
 
 import com.example.demopredicates.dto.Address;
 import com.example.demopredicates.dto.Person;
@@ -9,7 +9,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(MockitoExtension.class)
-public class PersonRulesUnitTest {
+public class PersonPredicatesUnitTest {
 
     @Test
     public void AddressRules_hasStreetAddress_returnTrue(){
@@ -17,7 +17,7 @@ public class PersonRulesUnitTest {
         var address = Address.builder().street("Ferdinand").build();
         var person = Person.builder().address(address).build();
         // WHEN
-        var result = PersonRules.hasStreetAddress("Ferdinand").test(person);
+        var result = PersonPredicates.hasStreetAddress("Ferdinand").test(person);
         // THEN
         assertTrue(result);
     }

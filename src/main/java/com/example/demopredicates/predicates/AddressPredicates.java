@@ -1,4 +1,4 @@
-package com.example.demopredicates.rules;
+package com.example.demopredicates.predicates;
 
 import com.example.demopredicates.dto.Address;
 import org.springframework.lang.NonNull;
@@ -6,7 +6,7 @@ import org.springframework.lang.NonNull;
 import java.util.Objects;
 import java.util.function.Predicate;
 
-public class AddressRules {
+public class AddressPredicates {
 
 
     public static Predicate<Address> hasStreetCode(@NonNull String streetCode) {
