@@ -105,8 +105,10 @@ public class StringPredicates {
 - [Person](src/main/java/com/example/demopredicates/dto/Person.java)
 
 ```java
+public class Address {
     private String streetCode;
     private String street;
+}
 ```
 
 ```java
