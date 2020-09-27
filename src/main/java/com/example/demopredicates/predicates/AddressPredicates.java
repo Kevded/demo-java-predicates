@@ -8,7 +8,6 @@ import java.util.function.Predicate;
 
 public class AddressPredicates {
 
-
     public static Predicate<Address> hasStreetCode(@NonNull String streetCode) {
         return address -> nonNullAddress().and(equalsIgnoreCaseStreetCode(streetCode)).test(address);
     }
@@ -28,6 +27,6 @@ public class AddressPredicates {
     }
 
     public static Predicate<Address> nonNullAddress() {
-        return address -> Objects.nonNull(address);
+        return Objects::nonNull;
     }
 }

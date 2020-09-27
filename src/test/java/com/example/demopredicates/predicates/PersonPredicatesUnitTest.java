@@ -13,7 +13,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @ExtendWith(MockitoExtension.class)
 public class PersonPredicatesUnitTest {
 
-
     @Test
     public void PersonPredicates_hasNicknameAndHasNicknamePrefixAndAsStreetAddress_returnTrue() {
         // GIVEN

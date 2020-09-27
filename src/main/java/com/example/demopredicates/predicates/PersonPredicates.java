@@ -14,12 +14,12 @@ public class PersonPredicates {
     public static Predicate<Person> hasNicknameAndHasNicknamePrefixAndAsStreetAddress(@NonNull String nickname,
                                                                                       @NonNull String nicknamePrefix,
                                                                                       @NonNull String streetAddress) {
+
         return person -> hasNonNullPersonAndHasNickname(nickname)
                 .and(hasNonNullPersonAndHasNicknameStartWith(nicknamePrefix))
                 .and(hasNonNullPersonAndHasStreetAddress(streetAddress))
                 .test(person);
     }
-
 
     public static Predicate<Person> hasNonNullPersonAndHasNicknameStartWith(@NonNull String nicknamePrefix) {
         return person -> nonNullPerson().and(hasNicknameStartWith(nicknamePrefix)).test(person);
@@ -36,7 +36,6 @@ public class PersonPredicates {
     public static Predicate<Person> hasNonNullPersonAndHasStreetCodeAddress(@NonNull String streetCodeAddress) {
         return person -> nonNullPerson().and(hasStreetCodeAddress(streetCodeAddress)).test(person);
     }
-
 
     public static Predicate<Person> equalsIgnoreCaseNickname(@NonNull String nickname) {
         return person -> person.getNicknames().stream().anyMatch(equalsIgnoreCaseString(nickname));
@@ -56,8 +55,6 @@ public class PersonPredicates {
     }
 
     public static Predicate<Person> nonNullPerson() {
-        return person -> Objects.nonNull(person);
+        return Objects::nonNull;
     }
-
-
 }
